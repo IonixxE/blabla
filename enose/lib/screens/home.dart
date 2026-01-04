@@ -1,7 +1,6 @@
 import 'package:enose/screens/result.dart';
 import 'package:flutter/material.dart';
 
-
 class Home extends StatelessWidget {
   const Home({super.key});
 
@@ -20,15 +19,25 @@ class Home extends StatelessWidget {
             const SizedBox(height: 60),
             SizedBox(
               height: 60,
-              width: 10,
+              width: 100,
               child: FilledButton(
                 onPressed: () {
-                  result();
+                  Navigator.push(
+                    context,
+                    MaterialPageRoute(builder: (context) => const Result()),
+                  );
                 },
+                style: FilledButton.styleFrom(
+                  padding: const EdgeInsets.symmetric(vertical: 5),
+                  backgroundColor: const Color.fromARGB(255, 64, 113, 192),
+                  shape: RoundedRectangleBorder(
+                    borderRadius: BorderRadius.circular(40),
+                  ),
+                ),
                 child: const Text(
                   'Start',
                   style: TextStyle(
-                    fontSize: 24,
+                    fontSize: 32,
                     color: Colors.white,
                     fontWeight: FontWeight.bold,
                   ),
@@ -41,8 +50,5 @@ class Home extends StatelessWidget {
         ),
       ),
     );
-  }
-  void result() {
-    runApp(const Result());
   }
 }

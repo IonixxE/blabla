@@ -36,6 +36,7 @@ dependencies:
   cupertino_icons: ^1.0.8
 
   google_fonts: ^6.3.3
+  icons_launcher: ^3.0.3
 
 dev_dependencies:
   flutter_test:
@@ -87,3 +88,10 @@ flutter:
   # For details regarding fonts from package dependencies,
   # see https://flutter.dev/to/font-from-package
 
+icons_launcher:
+  image_path: "assets/images/icon.jpg"
+  platforms:
+    android:
+      enable: true
+      adaptive_icon_background: "assets/images/icon.jpg"
+      adaptive_icon_foreground: "assets/images/icon.jpg"
